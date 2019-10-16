@@ -7,5 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH="/opt/ros/melodic/lib"
 export PWD="/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build"

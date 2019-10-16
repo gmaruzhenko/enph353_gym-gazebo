@@ -1,2 +1,0 @@
-
--DCATKIN_DEVEL_PREFIX=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353_lab06/devel -DCMAKE_INSTALL_PREFIX=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353_lab06/install -G Unix Makefiles

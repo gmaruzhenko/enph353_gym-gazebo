@@ -35,3 +35,11 @@
 /home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/gtest/googlemock/gtest/CMakeFiles/list_install_components.dir
 /home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir
 /home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/gtest/googlemock/gtest/CMakeFiles/rebuild_cache.dir
+/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/enph353_lab06/CMakeFiles/install/strip.dir
+/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/enph353_lab06/CMakeFiles/install/local.dir
+/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/enph353_lab06/CMakeFiles/test.dir
+/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/enph353_lab06/CMakeFiles/list_install_components.dir
+/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/enph353_lab06/CMakeFiles/edit_cache.dir
+/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/enph353_lab06/CMakeFiles/_catkin_empty_exported_target.dir
+/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/enph353_lab06/CMakeFiles/rebuild_cache.dir
+/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/enph353_lab06/CMakeFiles/install.dir
