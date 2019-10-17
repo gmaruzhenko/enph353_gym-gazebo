@@ -27,6 +27,7 @@ high_threshold = 50
 bwThresh = 100
 
 class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
+    
 
     def __init__(self):
         # Launch the simulation with the given launchfile name
@@ -120,6 +121,7 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         error = (average_white-index_max/2.)/index_max*expected_error_max
         # print average_white
 
+        #normalize for 10 sized array
         position = average_white/320.*10.  
         print position   
 
@@ -143,6 +145,17 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         #
         # You can use the self.timeout variable to keep track of which frames
         # have no line detected.
+
+        #update frame counter if no line seen 
+        if first_white==0 and second_white==0: 
+            self.timeout  += 1
+        # reset if back on track to keep episode going
+        else:
+            self.timeout = 0
+
+        # Stop episode after 30 frames of no line in a row
+        if self.timeout >=30:
+            done = True
 
         return state, done
 
