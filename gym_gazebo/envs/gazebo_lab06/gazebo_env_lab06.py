@@ -93,8 +93,8 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         (thresh, im_bw) = cv2.threshold(gray, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
 
         edged = cv2.Canny(im_bw, low_threshold, high_threshold)
-        # cv2.imshow("cropped", edged)
-        # cv2.waitKey(0)
+        cv2.imshow("cropped", edged)
+        cv2.waitKey(0)
         # Note Black is 0 white is 1
         # Find first and second occurance of contour plot on second to
         # last row of pixel (approximation of real path)
@@ -107,7 +107,7 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
 
         while index < index_max:
 
-            if edged[100, index] > 0:
+            if edged[150, index] > 0:
                 if first_white == 0:
                     first_white = index
                 else:
@@ -123,9 +123,10 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
 
         #normalize for 10 sized array
         position = average_white/320.*10.  
-        print position   
+        # print position   
 
         state[int(position)]=1
+        print state
 
 
 
