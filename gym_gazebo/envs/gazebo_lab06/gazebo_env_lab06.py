@@ -19,6 +19,11 @@ from time import sleep
 from gym.utils import seeding
 
 
+Kernel_size = 15
+low_threshold = 30
+high_threshold = 50
+bwThresh = 100
+
 class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
 
     def __init__(self):
@@ -43,6 +48,8 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         self.lower_blue = np.array([97,  0,   0])
         self.upper_blue = np.array([150, 255, 255])
 
+    
+    
     def process_image(self, data):
         '''
             @brief Coverts data into a opencv image and displays it
@@ -60,6 +67,33 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
 
         state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         done = False
+
+        gray = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
+
+        # Blur image to reduce noise. if Kernel_size is bigger the image will be more blurry
+        # blurred = cv2.GaussianBlur(gray, (Kernel_size, Kernel_size), 0)
+
+        # debug to find size of image
+        # print blurred.shape
+
+        # crop down to last few slices (actually not needed)
+        # crop_img = gray[600:800, 0:800]
+
+        # cv2.imshow("cropped", crop_img)
+        # cv2.waitKey(0)
+
+        # Perform canny edge-detection.
+        # If a pixel gradient is higher than high_threshold is considered as an edge.
+        # if a pixel gradient is lower than low_threshold is is rejected , it is not an edge.
+        # Bigger high_threshold values will provoque to find less edges.
+        # Canny recommended ratio upper:lower  between 2:1 or 3:1
+        (thresh, im_bw) = cv2.threshold(gray, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
+
+        edged = cv2.Canny(im_bw, low_threshold, high_threshold)
+        cv2.imshow("cropped", edged)
+        cv2.waitKey(0)
+
+
 
         # TODO: Analyze the cv_image and compute the state array and
         # episode termination condition.
