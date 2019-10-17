@@ -23,7 +23,7 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
 
     def __init__(self):
         # Launch the simulation with the given launchfile name
-        LAUNCH_FILE = '~/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/enph353_lab06/launch/lab06_world.launch'
+        LAUNCH_FILE = '/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/enph353_lab06/launch/lab06_world.launch'
         gazebo_env.GazeboEnv.__init__(self, LAUNCH_FILE)
         self.vel_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
         self.unpause = rospy.ServiceProxy('/gazebo/unpause_physics', Empty)
@@ -55,10 +55,11 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         except CvBridgeError as e:
             print(e)
 
-        # cv2.imshow("raw", cv_image)
+        cv2.imshow("raw", cv_image)
 
         state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         done = False
+        rospy.loginfo('aaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
 
         # TODO: Analyze the cv_image and compute the state array and
         # episode termination condition.
