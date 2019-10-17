@@ -55,8 +55,8 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         except CvBridgeError as e:
             print(e)
 
-        cv2.imshow("raw", cv_image)
-        cv2.waitKey(0)
+        # cv2.imshow("raw", cv_image)
+        # cv2.waitKey(0)
 
         state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         done = False
@@ -127,11 +127,11 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         # Set the rewards for your action
         if not done:
             if action == 0:  # FORWARD
-                reward = 4
+                reward = 5
             elif action == 1:  # LEFT
-                reward = 2
+                reward = 1
             else:
-                reward = 2  # RIGHT
+                reward = 1 # RIGHT
         else:
             reward = -200
 
