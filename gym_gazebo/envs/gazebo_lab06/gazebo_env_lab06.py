@@ -30,7 +30,7 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
     
 
     def __init__(self):
-        # Launch the simulation with the given launchfile name
+        # Launch the simulation with the given launchfile name NEED TO UPDATE IF CHANGE FOLDERS
         LAUNCH_FILE = '/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/enph353_lab06/launch/lab06_world.launch'
         gazebo_env.GazeboEnv.__init__(self, LAUNCH_FILE)
         self.vel_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
@@ -73,28 +73,17 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
 
         gray = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
 
-        # Blur image to reduce noise. if Kernel_size is bigger the image will be more blurry
-        # blurred = cv2.GaussianBlur(gray, (Kernel_size, Kernel_size), 0)
-
-        # debug to find size of image
-        # print blurred.shape
-
-        # crop down to last few slices (actually not needed)
-        # crop_img = gray[600:800, 0:800]
-
-        # cv2.imshow("cropped", crop_img)
-        # cv2.waitKey(0)
-
         # Perform canny edge-detection.
         # If a pixel gradient is higher than high_threshold is considered as an edge.
         # if a pixel gradient is lower than low_threshold is is rejected , it is not an edge.
         # Bigger high_threshold values will provoque to find less edges.
         # Canny recommended ratio upper:lower  between 2:1 or 3:1
         (thresh, im_bw) = cv2.threshold(gray, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
-
         edged = cv2.Canny(im_bw, low_threshold, high_threshold)
-        cv2.imshow("cropped", edged)
-        cv2.waitKey(0)
+
+        # cv2.imshow("cropped", edged)
+        # cv2.waitKey(0)
+
         # Note Black is 0 white is 1
         # Find first and second occurance of contour plot on second to
         # last row of pixel (approximation of real path)
@@ -147,8 +136,11 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         # You can use the self.timeout variable to keep track of which frames
         # have no line detected.
 
-        #update frame counter if no line seen 
-        if first_white==0 and second_white==0: 
+        #noise check
+        sumofwhites = np.sum(edged[150, index], axis = 0)
+
+        #update frame counter if no line seen or noisy
+        if (first_white==0 and second_white==0) or sumofwhites> 5):
             self.timeout  += 1
         # reset if back on track to keep episode going
         else:
