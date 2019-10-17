@@ -56,10 +56,10 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
             print(e)
 
         cv2.imshow("raw", cv_image)
+        cv2.waitKey(0)
 
         state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         done = False
-        rospy.loginfo('aaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
 
         # TODO: Analyze the cv_image and compute the state array and
         # episode termination condition.
