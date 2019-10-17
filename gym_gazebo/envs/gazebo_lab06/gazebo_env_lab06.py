@@ -26,6 +26,19 @@ low_threshold = 30
 high_threshold = 50
 bwThresh = 100
 
+def contains_blue(img):
+    # Convert the image to HSV colour space
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    # Define a range for blue color
+    hsv_l = np.array([100, 150, 0])
+    hsv_h = np.array([140, 255, 255])
+    # Find blue pixels in the image
+    #
+    # cv2.inRange will create a mask (binary array) where the 1 values
+    # are blue pixels and 0 values are any other colour out of the blue
+    # range defined by hsv_l and hsv_h
+    return 255 in cv2.inRange(hsv, hsv_l, hsv_h)
+
 class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
     
 
@@ -80,9 +93,9 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         # Canny recommended ratio upper:lower  between 2:1 or 3:1
         (thresh, im_bw) = cv2.threshold(gray, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
         edged = cv2.Canny(im_bw, low_threshold, high_threshold)
-
         # cv2.imshow("cropped", edged)
-        # cv2.waitKey(0)
+        # cv2.waitKey(3)
+
 
         # Note Black is 0 white is 1
         # Find first and second occurance of contour plot on second to
@@ -137,10 +150,9 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         # have no line detected.
 
         #noise check
-        sumofwhites = np.sum(edged[150, index], axis = 0)
 
         #update frame counter if no line seen or noisy
-        if (first_white==0 and second_white==0) or sumofwhites> 5):
+        if (first_white==0 and second_white==0) and contains_blue(cv_image):
             self.timeout  += 1
         # reset if back on track to keep episode going
         else:
@@ -200,7 +212,7 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         # Set the rewards for your action
         if not done:
             if action == 0:  # FORWARD
-                reward = 5
+                reward = 25
             elif action == 1:  # LEFT
                 reward = 1
             else:
