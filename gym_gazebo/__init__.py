@@ -29,3 +29,9 @@ register(
 	entry_point='gym_gazebo.envs.gazebo_lab06:Gazebo_Lab06_Env',
 	max_episode_steps=3000,
 )
+
+register(
+	id='Competition-v0',
+	entry_point='gym_gazebo.envs.competition_env:Competition_Env',
+	max_episode_steps=3000,
+)

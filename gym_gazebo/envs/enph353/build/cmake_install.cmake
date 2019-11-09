@@ -131,7 +131,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/gtest/cmake_install.cmake")
+  include("/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/enph353/cmake_install.cmake")
+  include("/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/enph353_npcs/cmake_install.cmake")
+  include("/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/enph353_utils/cmake_install.cmake")
   include("/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/enph353_lab06/cmake_install.cmake")
+  include("/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/enph353_gazebo/cmake_install.cmake")
 
 endif()
 

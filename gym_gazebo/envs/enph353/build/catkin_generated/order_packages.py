@@ -2,4 +2,4 @@
 source_root_dir = "/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/devel;/opt/ros/melodic".split(';') if "/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/devel;/opt/ros/melodic" != "" else []
+underlay_workspaces = "/opt/ros/melodic".split(';') if "/opt/ros/melodic" != "" else []
