@@ -33,5 +33,5 @@ register(
 register(
 	id='Competition-v0',
 	entry_point='gym_gazebo.envs.competition_env:Competition_Env',
-	max_episode_steps=3000,
+	max_episode_steps=10,
 )

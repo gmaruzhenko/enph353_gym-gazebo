@@ -1,1 +1,1 @@
-from gym_gazebo.envs.gazebo_lab06.gazebo_env_lab06 import Gazebo_Lab06_Env
+from gym_gazebo.envs.competition_env.gazebo_env_competition import Competition_Env

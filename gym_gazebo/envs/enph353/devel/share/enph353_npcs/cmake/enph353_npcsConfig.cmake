@@ -67,7 +67,7 @@ set(enph353_npcs_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(enph353_npcs_SOURCE_PREFIX /home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/enph353_npcs)
+  set(enph353_npcs_SOURCE_PREFIX /home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/enph353/enph353_npcs)
   set(enph353_npcs_DEVEL_PREFIX /home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/devel)
   set(enph353_npcs_INSTALL_PREFIX "")
   set(enph353_npcs_PREFIX ${enph353_npcs_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'enph353_npcs' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'enph353_npcs' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/enph353_npcs/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'enph353_npcs' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/enph353/enph353_npcs/${idir}'.  ${_report}")
     endif()
     _list_append_unique(enph353_npcs_INCLUDE_DIRS ${include})
   endforeach()
@@ -131,7 +131,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/devel/lib;/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

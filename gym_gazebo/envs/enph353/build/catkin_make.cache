@@ -1,2 +1,2 @@
-competition_ros_pkg/enph353:competition_ros_pkg/enph353_gazebo:competition_ros_pkg/enph353_npcs:competition_ros_pkg/enph353_utils:enph353_lab06
+competition_ros_pkg/adeept_awr/adeept_awr:competition_ros_pkg/adeept_awr/adeept_awr_description:competition_ros_pkg/adeept_awr/adeept_awr_gazebo:competition_ros_pkg/adeept_awr_ros_driver:competition_ros_pkg/enph353/enph353:competition_ros_pkg/enph353/enph353_gazebo:competition_ros_pkg/enph353/enph353_npcs:competition_ros_pkg/enph353/enph353_utils:enph353_lab06
 -DCATKIN_DEVEL_PREFIX=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/devel -DCMAKE_INSTALL_PREFIX=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/install -G Unix Makefiles

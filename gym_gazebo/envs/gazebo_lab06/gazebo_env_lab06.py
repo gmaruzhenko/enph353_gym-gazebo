@@ -93,8 +93,8 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         # Canny recommended ratio upper:lower  between 2:1 or 3:1
         (thresh, im_bw) = cv2.threshold(gray, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
         edged = cv2.Canny(im_bw, low_threshold, high_threshold)
-        # cv2.imshow("cropped", edged)
-        # cv2.waitKey(3)
+        cv2.imshow("cropped", edged)
+        cv2.waitKey(3)
 
 
         # Note Black is 0 white is 1
@@ -159,7 +159,7 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
             self.timeout = 0
 
         # Stop episode after 30 frames of no line in a row
-        if self.timeout >=30:
+        if self.timeout >=5:
             done = True
 
         return state, done
@@ -185,10 +185,10 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
             vel_cmd.angular.z = 0.0
         elif action == 1:  # LEFT
             vel_cmd.linear.x = 0.0
-            vel_cmd.angular.z = 0.5
+            vel_cmd.angular.z = 0.2
         elif action == 2:  # RIGHT
             vel_cmd.linear.x = 0.0
-            vel_cmd.angular.z = -0.5
+            vel_cmd.angular.z = -0.2
 
         self.vel_pub.publish(vel_cmd)
 

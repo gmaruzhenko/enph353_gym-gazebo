@@ -716,6 +716,30 @@ actionlib_DIR:PATH=/opt/ros/melodic/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/melodic/share/actionlib_msgs/cmake
 
+//Value Computed by CMake
+adeept_awr_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/adeept_awr/adeept_awr
+
+//Value Computed by CMake
+adeept_awr_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/adeept_awr/adeept_awr
+
+//Value Computed by CMake
+adeept_awr_description_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/adeept_awr/adeept_awr_description
+
+//Value Computed by CMake
+adeept_awr_description_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/adeept_awr/adeept_awr_description
+
+//Value Computed by CMake
+adeept_awr_gazebo_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/adeept_awr/adeept_awr_gazebo
+
+//Value Computed by CMake
+adeept_awr_gazebo_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/adeept_awr/adeept_awr_gazebo
+
+//Value Computed by CMake
+adeept_awr_ros_driver_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/adeept_awr_ros_driver
+
+//Value Computed by CMake
+adeept_awr_ros_driver_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/adeept_awr_ros_driver
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 
@@ -729,16 +753,16 @@ cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
 dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
 
 //Value Computed by CMake
-enph353_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/enph353
+enph353_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/enph353/enph353
 
 //Value Computed by CMake
-enph353_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/enph353
+enph353_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/enph353/enph353
 
 //Value Computed by CMake
-enph353_gazebo_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/enph353_gazebo
+enph353_gazebo_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/enph353/enph353_gazebo
 
 //Value Computed by CMake
-enph353_gazebo_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/enph353_gazebo
+enph353_gazebo_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/enph353/enph353_gazebo
 
 //Value Computed by CMake
 enph353_lab06_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/enph353_lab06
@@ -747,16 +771,16 @@ enph353_lab06_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/e
 enph353_lab06_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/enph353_lab06
 
 //Value Computed by CMake
-enph353_npcs_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/enph353_npcs
+enph353_npcs_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/enph353/enph353_npcs
 
 //Value Computed by CMake
-enph353_npcs_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/enph353_npcs
+enph353_npcs_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/enph353/enph353_npcs
 
 //Value Computed by CMake
-enph353_utils_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/enph353_utils
+enph353_utils_BINARY_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/build/competition_ros_pkg/enph353/enph353_utils
 
 //Value Computed by CMake
-enph353_utils_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/enph353_utils
+enph353_utils_SOURCE_DIR:STATIC=/home/gosha/Code/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/competition_ros_pkg/enph353/enph353_utils
 
 //The directory containing a CMake configuration file for gazebo.
 gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
@@ -1260,7 +1284,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
